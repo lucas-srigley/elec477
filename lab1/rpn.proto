@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package rpn;
+
+enum Operation {
+  ADD = 0;
+  SUBTRACT = 1;
+  MULTIPLY = 2;
+  DIVIDE = 3;
+}
+
+message PushRequest {
+  float value = 1;
+}
+
+message PushResponse {
+  bool status = 1;
+}
+
+message PopRequest {
+}
+
+message PopResponse {
+  bool status = 1;
+}
+
+message ReadRequest {
+}
+
+message ReadResponse {
+  bool status = 1;
+  float value = 2;
+}
+
+message SwapRequest {
+}
+
+message SwapResponse {
+  bool status = 1;
+}
+
+message OperationRequest {
+  Operation op = 1;
+}
+
+message OperationResponse {
+  bool status = 1;
+  float value = 2;
+}
+
+message RPCMessage {
+  uint32 magic = 1;
+  uint32 version = 2;
+  uint64 message_id = 3;
+  
+  oneof message_type {
+    PushRequest push_req = 10;
+    PushResponse push_resp = 11;
+    PopRequest pop_req = 12;
+    PopResponse pop_resp = 13;
+    ReadRequest read_req = 14;
+    ReadResponse read_resp = 15;
+    SwapRequest swap_req = 16;
+    SwapResponse swap_resp = 17;
+    OperationRequest op_req = 18;
+    OperationResponse op_resp = 19;
+  }
+}
