@@ -1,4 +1,4 @@
-#include "rpn_server.h"
+#include "rpn_server.hpp"
 #include <iostream>
 #include <cstdlib>
 
@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
         port = atoi(argv[1]);
     }
     
-    std::cout << "Starting RPN Calculator Server on port " << port << std::endl;
+    std::cout << "Starting server on port " << port << std::endl;
     run_server(port);
     
     return 0;

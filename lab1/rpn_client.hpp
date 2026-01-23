@@ -1,9 +1,9 @@
-#ifndef RPN_CLIENT_H
-#define RPN_CLIENT_H
+#ifndef RPN_CLIENT_HPP
+#define RPN_CLIENT_HPP
 
 #include <cstdint>
 
-struct RPNValueResult {
+struct GetResult {
     bool status;
     float value;
 };
@@ -17,18 +17,17 @@ private:
 public:
     RPNClient(uint16_t port);
     ~RPNClient();
-    
     bool push(float value);
     bool pop();
-    RPNValueResult read();
+    GetResult read();
     bool swap();
-    RPNValueResult add();
-    RPNValueResult subtract();
-    RPNValueResult multiply();
-    RPNValueResult divide();
+    GetResult add();
+    GetResult subtract();
+    GetResult multiply();
+    GetResult divide();
     
 private:
-    RPNValueResult operation(char op);
+    GetResult operation(char op);
 };
 
 #endif

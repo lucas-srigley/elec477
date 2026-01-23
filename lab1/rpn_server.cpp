@@ -1,4 +1,4 @@
-#include "rpn_server.h"
+#include "rpn_server.hpp"
 #include "rpn.pb.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -96,7 +96,7 @@ void run_server(uint16_t port) {
         return;
     }
     
-    std::cout << "RPN Server listening on port " << port << std::endl;
+    std::cout << "Server listening on port " << port << std::endl;
     
     while (true) {
         char buffer[BUFFER_SIZE];
@@ -180,8 +180,7 @@ void run_server(uint16_t port) {
         std::string response_data;
         response.SerializeToString(&response_data);
         
-        sendto(sockfd, response_data.c_str(), response_data.size(), 0,
-               (struct sockaddr*)&client_addr, client_len);
+        sendto(sockfd, response_data.c_str(), response_data.size(), 0, (struct sockaddr*)&client_addr, client_len);
     }
     
     close(sockfd);

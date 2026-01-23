@@ -17,23 +17,20 @@ message PushResponse {
   bool status = 1;
 }
 
-message PopRequest {
-}
+message PopRequest {}
 
 message PopResponse {
   bool status = 1;
 }
 
-message ReadRequest {
-}
+message ReadRequest {}
 
 message ReadResponse {
   bool status = 1;
   float value = 2;
 }
 
-message SwapRequest {
-}
+message SwapRequest {}
 
 message SwapResponse {
   bool status = 1;
