@@ -1,0 +1,20 @@
+// Terminal 1
+cd ServiceServer
+make
+cd ..
+
+make clean
+make all
+
+export SERVICEADDR=localhost:3600
+cd ServiceServer
+./bin/svcserver 3600
+
+// Terminal 2
+export SERVICEADDR=localhost:3600
+./server 3601 calc_server_1
+
+// Terminal 3
+export SERVICEADDR=localhost:3600
+./test1 calc_server_1
+./test3 calc_server_1

@@ -34,8 +34,8 @@
 #include "HexDump.hpp"
 
 // Port Range - set to your groups values
-#define SERVICE_START_PORT 2500
-#define SERVICE_END_PORT 2599
+#define SERVICE_START_PORT 3600
+#define SERVICE_END_PORT 3699
 
 // bigger than anything that will happen.
 #define BUFFSIZE 2048
