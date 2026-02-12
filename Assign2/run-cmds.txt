@@ -1,4 +1,6 @@
-// Terminal 1
+// Make sure you are cded in Assign2 folder
+
+// Terminal 1 - make and start service server
 cd ServiceServer
 make
 cd ..
@@ -10,11 +12,43 @@ export SERVICEADDR=localhost:3600
 cd ServiceServer
 ./bin/svcserver 3600
 
-// Terminal 2
+// Terminal 2 - start calc server 1
 export SERVICEADDR=localhost:3600
 ./server 3601 calc_server_1
 
-// Terminal 3
+// Terminal 3 - start calc server 2
+export SERVICEADDR=localhost:3600
+./server 3602 calc_server_2
+
+// Terminal 4 - run tests
 export SERVICEADDR=localhost:3600
 ./test1 calc_server_1
+./test2
+./test3 calc_server_1
+// Make sure you are cded in Assign2 folder
+
+// Terminal 1 - make and start service server
+cd ServiceServer
+make
+cd ..
+
+make clean
+make all
+
+export SERVICEADDR=localhost:3600
+cd ServiceServer
+./bin/svcserver 3600
+
+// Terminal 2 - start calc server 1
+export SERVICEADDR=localhost:3600
+./server 3601 calc_server_1
+
+// Terminal 3 - start calc server 2
+export SERVICEADDR=localhost:3600
+./server 3602 calc_server_2
+
+// Terminal 4 - run tests
+export SERVICEADDR=localhost:3600
+./test1 calc_server_1
+./test2
 ./test3 calc_server_1
