@@ -1,0 +1,7 @@
+Test 1: Client messages to replica are redirected to primary
+Using service: calc_server
+
+Push 2.0 to replica
+Push: pass
+Read: 2.0
+Pass: got 2.0 back from primary

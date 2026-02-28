@@ -1,0 +1,8 @@
+Test 2: State changes on primary are forwarded to replica
+
+Push 100.0 via primary
+Primary read: 100.0
+
+Read through replica (redirects to primary)
+Replica read: 100.0
+Pass: replica has same state as primary
