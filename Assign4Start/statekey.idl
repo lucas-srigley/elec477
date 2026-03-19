@@ -1,0 +1,21 @@
+
+
+module State{
+    @final
+    struct Update {
+	
+	string icao24;
+        unsigned long timestamp;
+	double lat;
+	double lon;
+	float velocity;
+	float heading;
+	float vertrate;
+         @key
+        string callsign;
+	unsigned long squawk;
+	float baroaltitude;
+	float geoaltitude;
+    };
+};
+
