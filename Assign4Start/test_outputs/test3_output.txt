@@ -1,0 +1,26 @@
+Terminal 1 output:
+
+AD: waiting for data
+AD: got TEST003 dist=1.71812nm alt=2296.59ft
+AD: got TEST003 dist=1.71812nm alt=2624.67ft
+AD: handoff to Centre (2500ft) TEST003
+
+Terminal 2 output:
+
+Centre: waiting for data
+Centre: received handoff for TEST003
+
+Terminal 3 output:
+
+./flights: Domain is 7
+./flights: waiting for subscriber to start
+./flights: starting the data loop
+Count 0
+time 1000000000
+icao24 cccccc
+callsign TEST003
+Count 1
+time 1000000010
+icao24 cccccc
+callsign TEST003
+unregistering flight TEST003

@@ -18,13 +18,13 @@ using namespace std;
 using namespace org::eclipse::cyclonedds;
 
 // set this to your team number
-uint32_t domainID = 0;
+uint32_t domainID = 7;
 char * programName;
 
 int main(int argc, char * argv[])
 {
     time_t lastUsedTime = 0;
-    const string fileName = "../Toronto_2202-06-27-12.csv";
+    const string fileName = "../test4.csv";
     ifstream file(fileName);
     Aircraft aircraft;
     string headings; // variable to read the first line of the CSV file
@@ -67,7 +67,9 @@ int main(int argc, char * argv[])
     wsc.enabled_statuses(dds::core::status::StatusMask::publication_matched());
     waitset.attach_condition(wsc);
     try{
-        waitset.wait(dds::core::Duration::infinite());
+        while (writer.publication_matched_status().current_count() < 2) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }
     }
     catch (const dds::core::Exception &e){
         cerr << programName << ": encountered an exception while waiting for subscriber: \"" << e.what() << "\"" << endl;

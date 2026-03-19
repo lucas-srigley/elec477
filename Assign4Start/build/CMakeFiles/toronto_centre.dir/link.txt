@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=gnu++11 -g CMakeFiles/toronto_centre.dir/toronto_centre.cpp.o CMakeFiles/toronto_centre.dir/statekey.cpp.o CMakeFiles/toronto_centre.dir/transfer.cpp.o -o toronto_centre  -Wl,-rpath,/opt/cyclone_cplusapi/lib:/opt/cyclone/lib /opt/cyclone_cplusapi/lib/libddscxx.so.0.11.0 /opt/cyclone/lib/libddsc.so.0.11.0 

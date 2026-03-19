@@ -1,0 +1,14 @@
+// make sure you are cded into Assign4Start/build
+cd Assign4Start/build/
+
+// For each test, change the fileName string in flights.cpp to whichever test case you are running. Example test 1 would be "../test1.csv". You will also need to run "make clean" again.
+// Terminal 1
+cmake -DCMAKE_BUILD_TYPE=Debug ..
+make
+./toronto_ad
+
+// Terminal 2
+./toronto_centre
+
+// Terminal 3
+./flights

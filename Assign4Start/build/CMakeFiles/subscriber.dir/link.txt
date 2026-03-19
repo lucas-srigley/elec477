@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=gnu++11 -g CMakeFiles/subscriber.dir/subscriber.cpp.o CMakeFiles/subscriber.dir/statekey.cpp.o -o subscriber  -Wl,-rpath,/opt/cyclone_cplusapi/lib:/opt/cyclone/lib /opt/cyclone_cplusapi/lib/libddscxx.so.0.11.0 /opt/cyclone/lib/libddsc.so.0.11.0 

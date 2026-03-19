@@ -29,13 +29,24 @@ endif()
 
 # generation of code from idl files. One line per type
 idlcxx_generate(TARGET statedata FILES statekey.idl WARNINGS no-implicit-extensibility)
+idlcxx_generate(TARGET transferdata FILES transfer.idl WARNINGS no-implicit-extensibility)
 
 add_executable(flights flights.cpp aircraft.cpp)
 add_executable(subscriber subscriber.cpp)
 
 # Link both executables to idl data type library and ddscxx.
+add_executable(toronto_ad toronto_ad.cpp)
+add_executable(toronto_centre toronto_centre.cpp)
+add_executable(query query.cpp)
+
 target_link_libraries(flights CycloneDDS-CXX::ddscxx statedata)
 target_link_libraries(subscriber CycloneDDS-CXX::ddscxx statedata)
+target_link_libraries(toronto_ad CycloneDDS-CXX::ddscxx statedata transferdata)
+target_link_libraries(toronto_centre CycloneDDS-CXX::ddscxx statedata transferdata)
+target_link_libraries(query CycloneDDS-CXX::ddscxx statedata)
 
 set_property(TARGET flights PROPERTY CXX_STANDARD ${cyclonedds_cpp_std_to_use})
 set_property(TARGET subscriber PROPERTY CXX_STANDARD ${cyclonedds_cpp_std_to_use})
+set_property(TARGET toronto_ad PROPERTY CXX_STANDARD ${cyclonedds_cpp_std_to_use})
+set_property(TARGET toronto_centre PROPERTY CXX_STANDARD ${cyclonedds_cpp_std_to_use})
+set_property(TARGET query PROPERTY CXX_STANDARD ${cyclonedds_cpp_std_to_use})

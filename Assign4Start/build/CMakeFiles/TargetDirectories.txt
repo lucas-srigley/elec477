@@ -1,0 +1,9 @@
+/home/20lss6/elec477_team7/Assign4Start/build/CMakeFiles/statedata_generate.dir
+/home/20lss6/elec477_team7/Assign4Start/build/CMakeFiles/transferdata_generate.dir
+/home/20lss6/elec477_team7/Assign4Start/build/CMakeFiles/flights.dir
+/home/20lss6/elec477_team7/Assign4Start/build/CMakeFiles/subscriber.dir
+/home/20lss6/elec477_team7/Assign4Start/build/CMakeFiles/toronto_ad.dir
+/home/20lss6/elec477_team7/Assign4Start/build/CMakeFiles/toronto_centre.dir
+/home/20lss6/elec477_team7/Assign4Start/build/CMakeFiles/query.dir
+/home/20lss6/elec477_team7/Assign4Start/build/CMakeFiles/edit_cache.dir
+/home/20lss6/elec477_team7/Assign4Start/build/CMakeFiles/rebuild_cache.dir

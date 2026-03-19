@@ -1,0 +1,3 @@
+time,icao24,lat,lon,velocity,heading,vertrate,callsign,onground,alert,spi,squawk,baroaltitude,geoaltitude,lastposupdate,lastcontact
+1000000000,bbbbbb,44,-80,90,180,0,TEST002,False,False,False,1234,600,600,999999999,999999999
+1000000010,bbbbbb,43.7,-79.6,90,180,0,TEST002,False,False,False,1234,600,600,1000000009,1000000009

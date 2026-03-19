@@ -1,0 +1,16 @@
+module Transfer {
+    enum Zone {
+        TORONTO_AD,
+        TORONTO_CENTRE
+    };
+
+    @final
+    struct Handoff {
+        @key
+        string callsign;
+        string icao24;
+        Zone   source;
+        Zone   destination;
+        unsigned long trigger_timestamp;
+    };
+};
